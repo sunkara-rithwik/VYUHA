@@ -1,0 +1,95 @@
+:root {
+  --color-royal-blue: #071A3A;
+  --color-midnight-indigo: #10102D;
+  --color-antique-gold: #D6A64B;
+  --color-divine-gold: #FFD778;
+  --color-sacred-saffron: #E68A24;
+  --color-warm-ivory: #FFF1D0;
+  --color-lotus-pink: #E8A5B6;
+  --color-celestial-cyan: #7EDCEB;
+  --color-dark-void: #050614;
+
+  --font-serif: 'Cinzel', serif;
+  --font-decorative: 'Cinzel Decorative', serif;
+  --font-sanskrit: 'Yatra One', cursive, serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Custom scrollbars with golden accents */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071A3A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D6A64B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD778;
+}
+
+/* Divine border utilities */
+.border-gold-ornate {
+  border: 1px solid rgba(214, 166, 75, 0.45);
+  box-shadow: 0 0 15px rgba(255, 215, 120, 0.2), inset 0 0 15px rgba(255, 215, 120, 0.05);
+}
+
+.border-gold-glow {
+  border: 1px solid rgba(255, 215, 120, 0.7);
+  box-shadow: 0 0 25px rgba(255, 215, 120, 0.5), inset 0 0 20px rgba(230, 138, 36, 0.2);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF1D0 0%, #FFD778 50%, #D6A64B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-saffron-gradient {
+  background: linear-gradient(135deg, #FFD778 0%, #E68A24 70%, #B85800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-radial-temple {
+  background: radial-gradient(circle at 50% 30%, rgba(16, 16, 45, 0.9) 0%, rgba(7, 26, 58, 0.95) 60%, rgba(5, 6, 20, 1) 100%);
+}
+
+.bg-radial-divine {
+  background: radial-gradient(circle at 50% 40%, rgba(230, 138, 36, 0.15) 0%, rgba(16, 16, 45, 0.6) 40%, rgba(5, 6, 20, 0.95) 90%);
+}
+
+/* Ornamental corner accents */
+.corner-ornament {
+  position: relative;
+}
+
+.corner-ornament::before,
+.corner-ornament::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: #FFD778;
+  pointer-events: none;
+}
+
+.corner-ornament::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #FFD778;
+  border-left: 2px solid #FFD778;
+}
+
+.corner-ornament::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #FFD778;
+  border-right: 2px solid #FFD778;
+}

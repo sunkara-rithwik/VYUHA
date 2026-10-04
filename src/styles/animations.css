@@ -1,0 +1,82 @@
+/* Sacred Vyuha Animation Classes */
+
+@keyframes cosmicFloat {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes divineRays {
+  0% { opacity: 0.3; transform: scale(0.98) rotate(0deg); }
+  50% { opacity: 0.65; transform: scale(1.03) rotate(3deg); }
+  100% { opacity: 0.3; transform: scale(0.98) rotate(0deg); }
+}
+
+@keyframes chakraRotateClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes chakraRotateCounter {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes pulseGoldGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 215, 120, 0.4), inset 0 0 10px rgba(255, 215, 120, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 215, 120, 0.8), inset 0 0 20px rgba(230, 138, 36, 0.4);
+  }
+}
+
+@keyframes petalBloom {
+  0% { transform: scale(0.85); opacity: 0.4; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes needleBeam {
+  0% { stroke-dashoffset: 400; opacity: 0.2; }
+  50% { stroke-dashoffset: 0; opacity: 1; filter: drop-shadow(0 0 12px #FFD778); }
+  100% { stroke-dashoffset: -400; opacity: 0.4; }
+}
+
+@keyframes garudaWingFlap {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.08) translateY(-4px); }
+}
+
+.anim-cosmic-float {
+  animation: cosmicFloat 7s ease-in-out infinite;
+}
+
+.anim-divine-rays {
+  animation: divineRays 10s ease-in-out infinite;
+}
+
+.anim-chakra-cw {
+  animation: chakraRotateClockwise 35s linear infinite;
+}
+
+.anim-chakra-ccw {
+  animation: chakraRotateCounter 45s linear infinite;
+}
+
+.anim-gold-pulse {
+  animation: pulseGoldGlow 3s ease-in-out infinite;
+}
+
+.anim-garuda-wings {
+  animation: garudaWingFlap 4s ease-in-out infinite;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
